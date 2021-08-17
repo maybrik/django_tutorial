@@ -1,4 +1,0 @@
-[flake8]
-ignore = I202, F811, E902
-exclude = .git,venv,__pycache__,docs/source/conf.py,.idea
-max-line-length = 160

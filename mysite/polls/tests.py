@@ -1,13 +1,11 @@
 import datetime
 
-from django.test import TestCase
-
 from django.urls import reverse
 
+from django.test import TestCase
 from django.utils import timezone
 
 from .models import Question
-
 
 def create_question(question_text, days):
     """
@@ -76,7 +74,6 @@ class QuestionIndexViewTests(TestCase):
             [question2, question1],
         )
 
-
 class QuestionDetailViewTests(TestCase):
     def test_future_question(self):
         """
@@ -97,7 +94,6 @@ class QuestionDetailViewTests(TestCase):
         url = reverse('polls:detail', args=(past_question.id,))
         response = self.client.get(url)
         self.assertContains(response, past_question.question_text)
-
 
 class QuestionModelTests(TestCase):
 
