@@ -1,13 +1,18 @@
+
 from . import views
 
 from django.contrib import admin
+
 from django.urls import include, path
 
 from django.http import HttpResponse, HttpResponseRedirect
+
 from django.shortcuts import get_object_or_404, render
+
 from django.urls import reverse
 
 from .models import Choice, Question
+
 
 app_name = 'polls'
 urlpatterns = [
@@ -16,6 +21,7 @@ urlpatterns = [
     path('<int:pk>/results/', views.ResultsView.as_view(), name='results'),
     path('<int:question_id>/vote/', views.vote, name='vote'),
 ]
+
 
 urlpatterns = [
     path('', views.index, name='index',
